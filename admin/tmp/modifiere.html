@@ -1,0 +1,37 @@
+<center>	
+<div id="ajouter" style="width:90%;">
+		<div id="lft" style="width:100%;">
+			<table class="list" cellpadding="0" cellspacing="0">
+				<tr class="titles">
+					<td>ID</td>
+					<td>Titre</td>
+					<td>Date A'ajoutement</td>
+					<td>Visite</td>
+					<td>Type</td>
+					<td></td>
+				</tr>
+				<?PHP
+				$query = $DB->select("jeux","*");
+
+					while($row = $DB->fetch($query)){
+				?>
+				<tr>
+					<td><?PHP echo $row['id']; ?></td>
+					<td><?PHP echo $row['Titre']; ?></td>
+					<td><?PHP echo $row['Date_ajou']; ?></td>
+					<td><?PHP echo $row['Visit']; ?></td>
+					<td><?PHP echo $row['Lvl']; ?></td>
+					<td>
+						<a href="index.php?mode=edit&id=<?PHP echo $row['id']; ?>" > <img src="icon/editJ.png"></a>
+						<a href="index.php?mode=delete&id=<?PHP echo $row['id']; ?>" > <img src="icon/deleteJ.png"></a>
+					</td>
+				</tr>
+				<?PHP
+					}
+				?>
+			</table>
+
+		</div>
+</div>
+</center>
+

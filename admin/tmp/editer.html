@@ -1,0 +1,101 @@
+				<?PHP
+				
+				$query = $DB->select("jeux","*"," id=".$_GET["id"]." ");
+				while($row = $DB->fetch($query)){
+				?>
+<center>
+<form method="POST" id="registration" action="index.php?mode=VeditGame&id=<?PHP echo $row['id']; ?> ">	
+<div id="ajouter">
+		<div id="lft">
+<br><br><br>
+		<div id="one" ><table width="80%">
+			<tr>
+				<td>
+			<span> Titre:</span><br>
+			<input size="30" ondblclick="this.value=''"  id="titreJ" type="text" name="titleGame" placeholder="Entrer Le Titre du jeux" value="<?PHP echo $row['Titre']; ?>" />
+				</td>
+				<td>
+						<span> Date Du Jeux:</span><br>
+			<input size="30" ondblclick="this.value=''" id="dateJ" "<?PHP echo $row['Date_ajou']; ?>" type="text" name="dtJeux" placeholder="Date de création du jeux" />
+				</td>
+			</tr>
+			<tr><td colspan="2">
+							<span> Image :</span><br>
+			<input size="74" ondblclick="this.value=''" id="logoJ" "<?PHP echo $row['image']; ?> type="text" name="logoIMG" placeholder="Donnée Le Lien de l'image du jeux" />
+
+			</td></tr>
+			<tr><td colspan="2">
+				
+							<span> GamePlay:</span><br>
+			<input size="74" ondblclick="this.value=''" type="text" id="videoJ" name="gameplay" value="<?PHP echo $row['video']; ?>" placeholder="Donnée un lien d'une video de gameplay du jeux" />
+			</td></tr>
+			<tr><td colspan="2">
+				
+							<span> Capture 1:</span><br>
+			<input size="74" type="file" name="cap1" id="cap1" />
+			</td></tr>
+			<tr><td colspan="2">
+				
+							<span> Capture 2:</span><br>
+			<input size="74" ondblclick="this.value=''" type="file" name="cap2" id="cap2" />
+			</td></tr>
+			<tr><td colspan="2">
+							<span> Capture 3:</span><br>
+			<input size="74" type="file" name="cap3"  />
+			</td></tr>
+			<tr><td colspan="2">
+				<button name="requirement" type="button" onclick="javascript:switchADD(2);">Suivant ></button>
+			</td></tr>		
+		</table></div>
+<div id="two" hidden="true"><table width="80%">
+			<tr><td colspan="2">
+							<span> Description :</span><br> 
+			<textarea  cols="65" rows="18" name="desc" id="descJ" vaue="<?PHP echo $row['Descr']; ?>" ></textarea>
+			</td></tr>
+			<tr><td >
+				<button class="back"  type="button" onclick="javascript:switchADD(1);">< Présecent</button>
+				<button name="requirement"  type="button" onclick="javascript:switchADD(3);">Suivant  ></button>
+			</td></tr>		
+		</table>
+	</div>
+	<div id="three" hidden="true"><table width="80%" cellpadding="0" cellspacing="0">
+			<tr><td colspan="2">
+							<span> System Requirements :</span><br>
+			<textarea  cols="65" <?PHP echo $row['System']; ?> rows="18" name="requir" id="requirJ"></textarea>
+			</td></tr>
+			<tr><td >
+				<button class="back" name="requirement" type="button" onclick="javascript:switchADD(2);">< Présecent</button>
+				<button name="requirement" type="button"onclick="javascript:switchADD(4);">Suivant ></button>
+			</td></tr>		
+		</table>
+	</div>
+		<div id="four" hidden="true"><table width="80%">
+			<tr><td colspan="2">
+							<span> détail du jeux final ici :</span><br>
+			</td></tr>
+			<tr><td >
+				<button class="back" name="requirement" onclick="javascript:switchADD(3);">< Présecent</button>
+				<button name="requirement" >Validé ></button>
+			</td></tr>		
+		</table>
+	</div>
+		</div>	
+
+</form>
+
+		<div id="rigther">
+		 <img id="IMGone" src="icon/one_hover.png">	
+		 <img id="IMGtwo" src="icon/two.png">	
+		 <img id="IMGthree" src="icon/three.png">	
+		 <img id="IMGfour" src="icon/four.png">	
+		</div>
+
+
+</div>
+</center>
+				<?PHP
+			}
+				?>
+
+
+

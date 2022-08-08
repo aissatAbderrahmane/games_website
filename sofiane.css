@@ -1,0 +1,140 @@
+body {
+	margin:0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #55d6aa;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left; ;
+  display: inline-block;
+  color: #222;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #222;
+  color: #55d6aa;
+}
+
+
+main > img   {
+	height: 390px;
+	width: 280px;
+	
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	
+}
+
+h1{
+	margin-top: 70px;
+}
+h1,h2{
+	color: #FFFFFF;
+}
+
+main > div.textBox {
+	color: #FFFFFF;
+	font-family: Verdana;
+	background: #222;
+	width: 600px;
+	height: 323px;
+	overflow: auto;
+}
+main {
+	margin-left: 100px;
+}
+
+.container{
+	position: relative;
+	float:right;
+	right: 30px;
+	top: 10px;
+}
+
+.search-box input {
+	border: none;
+	background: none;
+	z-index: 1;
+	width: 25px;
+	transition: all .25s ease-in .25s;
+	color: transparent;
+	font-size: 1em;
+	line-height: 25px; 
+}
+
+
+.search-box input:hover {
+	cursor: pointer;
+}
+
+.search-box input:hover:focus {
+	cursor: text;
+}
+
+.search-box input:hover + span {
+	background: rgb(255,255,255,.2); 
+}
+
+.search-box input:focus {
+	width: 200px;
+	padding: 0 10px;
+	outline: none;
+	color: black;
+	background: none;
+	color: #fff; 
+}
+
+.search-box input:focus +span {
+	width: 200px;
+}
+.search-box input:focus +span::before {
+	width: 2px;
+	opacity: 0;
+	transition: all .25s ease-in
+}
+
+.search-box input +span {
+	z-index:  -1px;
+	position: absolute;
+	border: 2px solid #fff;
+	top: 0;
+	width: 25px;
+	height: 25px;
+	transition: all .25s ease-in .25s;
+	border-radius: 25px; 
+	left: 0;
+}
+
+.search-box input +span::before {
+	transition: all .25s ease-in .25s;
+	transform-origin: left top;
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 5px;
+	border-radius: 5px;
+	background: #fff;
+	transform: rotate(45deg) translate(26px,-2px);  
+}
+
+
+img{
+	float: left;
+}
+.textbox{
+	overflow: hidden;
+}

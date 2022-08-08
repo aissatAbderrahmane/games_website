@@ -1,0 +1,20 @@
+	<?PHP
+				
+	$query = $DB->select("jeux","*"," id=".$_GET["id"]." ");
+	$row = $DB->fetch($query);
+	?>
+<div class="clr"></div>
+		<div class="main">
+			<main>
+				<h1 ><?PHP echo $row["Titre"] ?></h1>
+				<img src='<?PHP echo $row["image"] ?>' >
+				<h2>Description:</h2> <br>
+					<div class="textBox"><h4>
+						<?PHP echo $row["Descr"] ?>
+					</h4>
+					</div>
+					<br>
+					<?PHP echo $row["Descr"] ?>
+			</main>
+		</div>
+		

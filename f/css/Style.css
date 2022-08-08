@@ -1,0 +1,110 @@
+body {
+	margin:0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+}
+
+.navbar {
+	top: 0;
+	margin-top: 0;
+	width: 100%;
+	overflow: hidden;
+	height:60px;
+	line-height: 70px;
+	background: #55d6aa;
+	position: fixed;
+
+	padding-bottom: 10px;
+}
+
+.logo {
+	width: 70px;
+	float: left;
+}
+.container {
+	width: 100%;
+	float: right;
+	top: 2px;
+	right:8px;
+	margin-left: 20px;
+}
+
+.menu {
+	float: right;
+
+}
+.menu li {
+	width: 120px;
+	text-align: center;
+	list-style: none;
+	float: left;
+}
+.menu li a {
+	display: inline-block;
+	color: #222;
+	text-decoration: none;
+	font-family: calibri;
+	text-transform: uppercase;
+	height:20px;
+}
+
+.menu li:hover {
+	background:#222; 
+	-webkit-border-radius:20px;
+	border: 2px solid #fff;
+
+}
+.menu li:hover a{
+	color: #55d6aa;
+}
+
+
+
+main > img   {
+	height: 390px;
+	width: 280px;
+	
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	
+}
+
+h1{
+	margin-top: 70px;
+}
+h1,h2{
+	color: #FFFFFF;
+}
+
+main > div.textBox {
+	color: #FFFFFF;
+	font-family: Verdana;
+	background: #222;
+	width: 600px;
+	height: 323px;
+	overflow: auto;
+}
+main {
+	margin-left: 100px;
+}
+
+
+#quick-search-input {
+    width: 250px;
+    height: 35px;
+    font-size: .85em;
+    font-weight: bold;
+    color: #55d6aa;
+    border: 2px solid #333;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    padding: 4px 30px;
+    background: #222 url("/img/a.png") no-repeat 100px 8px;
+    float: right;
+    bottom: 12px;
+    margin-right:20px;
+}
+

@@ -1,0 +1,23 @@
+	<div id="menu" onmouseenter="javascript:show();" onmouseleave="javascript:hide();">
+		<center>
+			<a class="home" href="#"></a>
+			<a class="add" href="index.php?mode=ajouter"></a>	
+			<a class="edit" href="index.php?mode=list"></a>	
+			<a class="trash" href="index.php?mode=list"></a>
+			<a class="stat" href="#"></a>	
+			<a class="mail" href="#"></a>
+		</center>
+	</div>
+		<script type="text/javascript">
+		function hide(){
+			var menu = document.getElementById("menu");
+			menu.setAttribute("id","menu_action");
+		}
+		function show(){
+			var menu = document.getElementById("menu_action");
+			menu.setAttribute("id","menu");
+		}
+		hide();
+	</script>
+</body>
+</html>

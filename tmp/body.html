@@ -1,0 +1,72 @@
+
+<div class="SSHcont" style="width:100% ;">
+  <div class="picture fade">
+    <a href="x"><img id="one" src="img1.jpg" style="height:500px;width:100%"></a>
+    <div class="text">1</div>
+  </div>
+  <div class="picture fade">
+    <a href="x"><img src="img2.jpg" style="height:500px;width:100%"></a>
+    <div class="text">2</div>
+  </div>
+  <div class="picture fade">
+    <a href="x"><img src="img3.jpg" style="height:500px;width:100%"></a>
+    <div class="text">3</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(1)"></span>
+</div> 
+<script>
+var slideIndex = 1,current = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("picture");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  var x = setInterval(function(){
+    currentSlide(slideIndex = current);
+    current++;
+    if(current == 4) current = 1;
+  },3000);
+</script>
+<div class="games">
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<a id="game" href="#" ><img src="farcry4.jpg"></a>
+<br>
+<center>
+<a id="pg" href="#" >1</a>
+<a id="pg" href="#" >2</a>
+<a id="pg" href="#" >3</a>
+<a id="pg" href="#" >4</a>
+<a id="pg" href="#" >5</a>
+<a id="pg" href="#" >6</a>
+</center>
+</div>
